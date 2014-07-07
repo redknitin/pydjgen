@@ -2,7 +2,7 @@ import os, re
 #import gen_urls, gen_views
 
 #modeldirname contains the name of the immediate parent directory (not full path; only its name)
-modeldirname = os.path.dirname(os.path.realpath(__file__)).split(os.sep)[-1]
+modeldirname = os.path.dirname(os.path.realpath(__file__)).split(os.sep)[-1]  #TODO: Use models.__file__ instead of __file__ of the current file
 
 cre = re.compile(r'class +(.*) *'+re.escape('('))
 modelfile = open('models.py', 'r')
